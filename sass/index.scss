@@ -1,0 +1,98 @@
+@import "dependencies";
+
+@import "variables";
+@import "mixin";
+
+@import "main-01";
+@import "services-02";
+@import "presentation-03";
+@import "progress-04";
+@import "projet-work-05";
+@import "contact-07";
+@import "footer-08";
+
+
+html{
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  height: 100%;
+  body {
+    font-family: $font-family-base;
+	font-size: $font-size-base;
+    color: $color2;
+    height: 100%;
+  }
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 18px;
+}
+.open-nav {
+  height: 130px !important;
+}
+.noscroll {
+  overflow: visible;
+  @include transition(height, 0.3s, linear);
+}
+.center {
+  @include transition(transform, 0.3s, linear);
+  @include transform(translateX(0%));
+}
+.bar-val {
+  @include transition(background-color, 0.3s, linear);
+  background-color: #228Ca8;
+}
+
+section {
+  overflow: hidden;
+  clear: both;
+  padding: 80px 0;
+  text-align: center;
+}
+.col-sm-6:after{
+  overflow: hidden;
+  clear: both;
+}
+.main-color-li {
+  color: $color3 !important;
+}
+.btn {
+  border: 2px solid $color1;
+  height: 60px;
+  background-color: $color2;
+  color: $color1;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  line-height: inherit;
+  outline: none;
+  @include transition(background-color, 0.3s, linear);
+  &:hover {
+    color: $color2;
+    @include transition(background-color, 0.3s, linear);
+    background-color: $color1;
+  }
+}
+.btn-perso {
+  position: relative;
+  float: right;
+  width: 3rem;
+  height: 1.8rem;
+  margin: 0;
+  background-color: transparent;
+  outline: none;
+  span {
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@import "tab";
+@import "desk";

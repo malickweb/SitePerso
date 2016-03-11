@@ -1,0 +1,83 @@
+@import "variables";
+@import "mixin";
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 27px;
+  }
+  .main-back-color {
+    background-color: $color1 !important;
+    color: $color2;
+    height: 110px;
+    padding: 12px;
+    @include transition(background-color 0.3s ease-in, height 0.2s ease-out , padding 0.3s ease-in);
+  }
+  .main-color {
+    color: $color2 !important;
+  }
+  .menu--head {
+    background-color: transparent;
+    @include transition(background-color 0.3s ease-in, height 0.2s ease-out , padding 0.3s ease-in);
+    .menu--contain {
+      display: none;
+    }
+    nav {
+      display: inline-block;
+      font-size: 19px;
+      height: inherit;
+      vertical-align: sub;
+      ul {
+        li {
+          display: inline-block;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+  #inner-img {
+    height: 170px;
+  }
+  .text-content {
+    p {
+      max-width: 500px;
+    }
+  }
+  .slide {
+    padding: 80px 15px 0;
+  }
+  #services {
+    .wow {
+      padding: 0;
+    }
+  }
+  #progress {
+    .img-lg {
+      width: 33%;
+    }
+  }
+  #contact {
+    min-height: 750px;
+    form {
+      .error-message-name,
+      .error-message-mail,
+      .error-message-text {
+      }
+      .error-message-mail {
+      }
+      .error-message-text {
+      }
+    }
+  }
+  #progress {
+    .icon-mobile:before,
+    .icon-tablet:before,
+    .icon-desktop:before {
+      font-size: 28px;
+    }
+  }
+  footer {
+  }
+}

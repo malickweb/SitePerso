@@ -1,0 +1,143 @@
+@import "variables";
+@import "mixin";
+
+
+#contact {
+  @include background("../img/contact-01.jpg", no-repeat, fixed, 0 0);
+  background-size: cover;
+  font-size: 18px;
+  text-align: left;
+  color: $color1;
+  h2 {
+    margin: 0 0 60px 0;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+    span {
+      font-weight: 500;
+      font-size: 45px;
+    }
+  }
+  .logo-contact {
+    font-size: $font-size11;
+    margin: 20px 0;
+    li {
+      display: block;
+      margin: 10px 0 0 0;
+      a {
+        @include transition(transform, 0.2s, linear);
+      }
+      .img-linkedin {
+        display: block;
+        width: 130px;
+        height: 34px;
+        background: url("../img/site-contact.png") no-repeat 0px 0px;
+      }
+      .img-viadeo {
+        display: block;
+        width: 105px;
+        height: 25px;
+        background: url("../img/site-contact.png") no-repeat 0px -34px;
+      }
+      .doc-cv {
+        color: $color1;
+      }
+      p {
+        display: inline-block;
+        font-size: 20px;
+        margin: 0 0 0 10px;
+      }
+      .img-linkedin:hover,
+      .img-viadeo:hover {
+        @include transform(scale(1.1));
+      }
+    }
+  }
+  form {
+    overflow: hidden;
+    .message-ok {
+      display: none;
+      text-align: center;
+      color: green;
+    }
+    .form-input {
+      margin: 0 0 5px 0;
+      height: 66px;
+      background-color: white;
+      i {
+        display: inline-block;
+      }
+    }
+    .icon-user,
+    .icon-envelope,
+    .icon-comment {
+      color: $color2;
+    }
+    .icon-user:before,
+    .icon-envelope:before,
+    .icon-comment:before,
+    .icon-circle-cross:before,
+    .icon-checkmark:before{
+      margin: 0 10px;
+      font-size: 28px;
+      vertical-align: middle;
+    }
+    .icon-circle-cross:before,
+    .icon-checkmark:before {
+      margin: 0 10px 0 0;
+    }
+    input {
+      width: 78%;
+      height: 60px;
+      font-size: 20px;
+      padding: 10px 0;
+      font-weight: 100;
+      background-color: $color1;
+      vertical-align: middle;
+      outline: none;
+      color: $color2;
+    }
+    .icon-circle-cross {
+      display: block;
+      color: red;
+    }
+    .error-name,
+    .error-name-synt,
+    .error-mail,
+    .error-mail-synt,
+    .error-text {
+      display: none;
+      font-size: 17px;
+      color: red;
+      padding: 0 0 5px 0;
+    }
+    .form-input-text {
+      display: inline-block;
+      background-color: white;
+      width: 100%;
+      .icon-comment {
+        display: inline-block;
+        vertical-align: top;
+      }
+      textarea {
+        width: 79%;
+        font-size: 20px;
+        color: $color2;
+        border: none;
+        outline: none;
+        height: 100px;
+        font-weight: 100;
+      }
+    }
+    .btn {
+      border: none;
+      margin: 30px 0 0 0;
+      vertical-align: baseline;
+    }
+    .icon-paper-plane:before {
+      font-size: $font-size2;
+      margin: 0 6px 0 0;
+      vertical-align: inherit;
+    }
+  }
+}

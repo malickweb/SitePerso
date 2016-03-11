@@ -1,0 +1,207 @@
+@import "variables";
+@import "mixin";
+
+#img-main {
+  @include background("../img/header-ordi.jpg", no-repeat, fixed, 50% 0);
+  background-size: cover;
+  height: 100%;
+  min-height: 850px;
+}
+.menu--head {
+  overflow: hidden;
+  background: $color1;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 12px 0;
+  z-index: 1;
+  @include transition(background, 0.2s, linear);
+  nav {
+    overflow: hidden;
+    height: 0;
+    font-size: $font-size2;
+    text-align: center;
+    text-transform: uppercase;
+    ul {
+      padding: 5px;
+      margin: 0;
+      li {
+        margin: 10px 0 0 0;
+        color: $color2;
+        a {
+          padding: 0 10px;
+          @include transition(color, 0.2s, linear);
+          &:hover {
+            box-sizing: border-box;
+            @include transition(color, 0.2s, linear);
+          }
+        }
+      }
+    }
+  }
+}
+.name {
+  display: inline-block;
+  a {
+    display: block;
+    h1:first-child {
+      font-size: 22px;
+      margin: 0;
+    }
+    h1:nth-last-child(1) {
+      display: none;
+      /*margin: 5px 0 0 0;
+      font-size: 18px;
+      font-weight: 100;
+      text-transform: uppercase;
+      span {
+        display: block;
+      }*/
+    }
+  }
+}
+#inner-img {
+  position: relative;
+  top: 250px;
+  left: 0;
+  background-color: #ffffff;
+  margin: 0px auto;
+  width: 85%;
+  height: 160px;
+  opacity: 0.8;
+}
+.text-content {
+  overflow: hidden;
+  position: absolute;
+  top: 250px;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  font-size: 22px;
+  padding: 0;
+  text-align: center;
+  p {
+    font-weight: 100;
+    margin: 0;
+  }
+  .text-main {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .slider {
+    overflow: hidden;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    ul {
+      -webkit-animation: slide 4s linear 0s infinite alternate;
+      -moz-animation: slide 4s linear 0s infinite alternate;
+      -ms-animation: slide 4s linear 0s infinite alternate;
+      -o-animation: slide 4s linear 0s infinite alternate;
+      animation: slide 4s linear 0s infinite alternate;
+      li {
+        height: 60px;
+      }
+    }
+  }
+}
+
+.menu--contain {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  .btn-perso {
+    span {
+      background-color: #74c7d5;
+      @include transition(all .3s);
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0.2rem;
+        top: .8rem;
+        left: 0;
+        background-color: #74c7d5;
+        @include transition(all .3s);
+      }
+      &:after {
+        content: '';
+        top: 1.6rem;
+      }
+    }
+  /*#menu--nav {
+    width: 26px;
+    height: 19px;
+    position: relative;
+    top: 8px;
+    @include transform(rotate(0deg));
+    @include transition(.5s ease-in-out);
+    cursor: pointer;
+    span {
+      position: absolute;
+      width: 100%;
+      height: 0.2rem;
+      top: 0;
+      left: 0;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0.2rem;
+        top: 1rem;
+        left: 0;
+        background-color: #74c7d5;
+        border-radius: 9px;
+        opacity: 1;
+        @include transition(all .3s);
+      }
+      &:after {
+        top: 2rem;
+      }
+    }
+  */  /*span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #74c7d5;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      @include transform(rotate(0deg));
+      @include transition(.25s ease-in-out);
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2) {
+        top: 8px;
+      }
+      &:nth-child(3) {
+        top: 16px;
+      }
+    }*/
+  }
+}
+.menu--contain {
+  .main-burger {
+    span {
+      top: 1rem;
+      @include transform(rotate(45deg));
+      @include transition(all .3s);
+      &:before {
+        content: '';
+        opacity: 0;
+        width: 0;
+        @include transition(all .3s);
+      }
+      &:after {
+        content: '';
+        top: 0;
+        @include transform(rotate(-90deg));
+        @include transition(all .3s);
+      }
+    }
+  }
+}

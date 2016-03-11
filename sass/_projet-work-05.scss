@@ -1,0 +1,60 @@
+@import "variables";
+
+#projet, #work {
+  background-color: #f5f5f5;
+  border: 1px solid  #ddd;
+  h2 {
+    color: $color3;
+    margin: 0 0 60px 0;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+  .content-link {
+    padding: 0;
+    overflow: hidden;
+    font-size: 9px;
+    ul {
+      display: table;
+      li {
+        display: inline-block;
+        overflow: hidden;
+        margin: 10px 0;
+      }
+    }
+    a {
+      display: inline-block;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  span {
+    position: relative;
+    display: block;
+    .img-responsive {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(70, 150, 222, 0.9);
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.2s linear;
+      @include transition(transform, 0.3s, linear);
+      &:hover {
+        opacity: 1;
+      }
+      .ombres {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        text-transform: uppercase;
+        width: 100%;
+        color: #fff;
+        @include transform(translate(0, -50%));
+        @include transition(transform, 0.3s, linear);
+      }
+    }
+  }
+}

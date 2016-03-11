@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixin";
+
+#presentation {
+  background-color: $color2;
+  color: $color1;
+  .col-sm-6 {
+    overflow: hidden;
+  }
+  img {
+    @include border-radius(50%);
+    max-width: 150px;
+    margin: 35px auto;
+  }
+  h1 {
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 19px;
+    text-align: justify;
+    line-height: 30px;
+    font-weight: 100;
+    margin: 0 0 40px 0;
+    a {
+      color: $color3;
+      @include transition(color, 0.2s, linear);
+      &:hover {
+        color: $color1;
+        @include transition(color, 0.2s, linear);
+      }
+    }
+  }
+  .btn-contact {
+    display: inline-block;
+  }
+}

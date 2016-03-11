@@ -1,0 +1,50 @@
+@import "variables";
+
+footer {
+  font-size: 18px;
+  padding: 15px;
+  div:nth-child(1) {
+    float: left;
+    h1 {
+      font-size: $font-size7;
+      margin: 0 0 5px 0;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: $font-size3;
+      margin: 0;
+    }
+  }
+  nav {
+    float: left;
+    margin: 20px auto;
+    color: $color2;
+    li:nth-child(1) {
+      a {
+        margin: 0 5px 0 0;
+      }
+    }
+    li {
+      display: inline-block;
+      border-right: 1px solid $color2;
+      a {
+        margin: 0 5px;
+        font-size: 15px;
+        text-transform: uppercase;
+        @include transition(color, 0.3s, linear);
+        &:hover {
+          color: $color3;
+          @include transition(color, 0.3s, linear);
+        }
+      }
+    }
+    li:last-child {
+      border: none;
+    }
+  }
+  .mention-legal {
+    font-size: 12px;
+    margin: 0;
+    clear: both;
+  }
+}

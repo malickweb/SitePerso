@@ -1,0 +1,54 @@
+@import "variables";
+@import "mixin";
+
+/*.slide {
+  padding: 60px 15px 0;
+  opacity: 0;
+}*/
+.touch #services .wow {
+  visibility: visible !important;
+  animation-name: none !important;
+  -webkit-animation-name: none !important;
+
+}
+#services {
+  background-color: $color1;
+  h2 {
+    padding: 30px 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+  .wow {
+    padding: 0 20px;
+  }
+  .icon {
+    display: block;
+    border: 5px solid $color2;
+    border-radius: 50%;
+    padding: 34px;
+    width: 160px;
+    font-size: $font-size13;
+    color: $color9;
+    margin: 40px auto;
+    @include transition(background-color, 0.2s, ease-in);
+    &:hover {
+      background-color: $color2;
+      color: $color1;
+    }
+  }
+  span.icon {
+    font-size: 38px;
+    padding: 20px;
+  }
+  h3{
+    margin: 15px 0;
+    text-transform: uppercase;
+  }
+  .text {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 16px;
+    color: $color9;
+  }
+}
